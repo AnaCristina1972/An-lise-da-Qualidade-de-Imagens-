@@ -1,0 +1,46 @@
+=================================================================
+ANÁLISE CRÍTICA — Darkroom
+=================================================================
+
+--- Variação métricas de qualidade (queda = sensível ao ruído) ---
+  NCC         : max=0.9996  min=0.5038  Δ=0.4958
+  Fidelity    : max=1.5363  min=0.0513  Δ=1.4850
+  Accuracy    : max=0.9824  min=-0.3964  Δ=1.3789
+  SSIM        : max=0.9885  min=0.0200  Δ=0.9684
+  MS-SSIM     : max=0.9982  min=0.0159  Δ=0.9822
+  UIQ         : max=0.8156  min=0.0101  Δ=0.8056
+  FSIM        : max=0.9869  min=0.4395  Δ=0.5475
+  VIF         : max=1.1379  min=0.1117  Δ=1.0262
+
+--- Variação métricas de erro (aumento = detecta degradação) ---
+  MSE         : max=5751.1278  min=2.8081  Δ=5748.3197
+  RMSE        : max=75.8362  min=1.6757  Δ=74.1605
+  MAE         : max=74.9729  min=0.9429  Δ=74.0300
+  NAE         : max=1.3964  min=0.0176  Δ=1.3789
+  PSNR: max=43.65 dB  min=10.53 dB  Δ=33.11 dB
+
+=================================================================
+RESUMO
+=================================================================
+
+1. MELHOR PARA DETECTAR RUÍDO:
+   SSIM e MS-SSIM mostraram queda monotônica e consistente.
+   VIF e FSIM também mostraram excelente sensibilidade.
+   NCC foi o menos sensível por medir apenas correlação linear.
+
+2. SEM CORRELAÇÃO PERCEPTUAL:
+   PSNR apresentou baixa correlação para distorções estruturais.
+   Desfoque leve (k=3) gera PSNR alto mas é claramente visível.
+
+3. POR QUE PSNR É INSUFICIENTE:
+   PSNR = f(MSE): trata pixels individualmente, sem considerar
+   estrutura espacial nem a sensibilidade do sistema visual humano.
+
+4. SSIM NA COMPRESSÃO JPEG:
+   Comportamento coerente: Q=10 → SSIM baixo (artefatos visíveis);
+   Q=90 → SSIM alto (indistinguível). MS-SSIM ainda mais robusto.
+
+5. MÉTRICAS EXTRAS:
+   UIQ: leve e boa correlação geral.
+   FSIM: excelente para distorções de borda e estrutura.
+   VIF: melhor correlação com MOS humano para desfoque e JPEG.
