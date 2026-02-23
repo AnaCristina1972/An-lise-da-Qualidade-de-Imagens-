@@ -1,4 +1,4 @@
-# Analise-da-Q# Implementação, Avaliação e Teste de Métricas Full Reference de Qualidade de Imagens
+# Implementação, Avaliação e Teste de Métricas Full Reference de Qualidade de Imagens
 
 > Trabalho acadêmico — Disciplina: Análise da Qualidade de Imagens  
 > Impact-Lab 2025/2 · Instituto de Computação (IComp) · UFAM
@@ -231,4 +231,4 @@ Todo o material gerado (código, imagens, CSVs e gráficos) está disponível em
 
 ## 📝 Licença
 
-Trabalho acadêmico — Impact-Lab 2025/2 · IComp · UFAM. Uso restrito a fins educacionais.ualidade-de-Imagens
+Trabalho acadêmico — Impact-Lab 2025/2 · IComp · UFAM. Uso restrito a fins educacionais.
